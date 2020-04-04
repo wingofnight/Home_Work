@@ -13,14 +13,18 @@ int main()
 	Mosscow.capitel_strenght = 10;
 	Voronez.capitel_strenght = 1;
 	Saratov.capital_coordinate = -1;
-
+	whoBig(Mosscow, Voronez, Saratov);
 
 }
 
 int whoBig(capital zero, capital one, capital two) {
 	capital Capital[3]{ zero,one,two };
+	int buff = Capital[0].capitel_strenght;
 	for (int i = 0; i < 3; i++)
-	{
-
+	{	
+		if (buff < Capital[i].capitel_strenght)
+		{
+			buff = Capital[i].capitel_strenght;
+		}
 	}
 }
